@@ -1,0 +1,88 @@
+.achievements{
+  &__items{
+    margin-top: 2em;
+  }
+}
+
+.achievement-item{
+  padding-left: 2.5em;
+  padding-bottom: 1.25em;
+  padding-top: .375em;
+  position: relative;
+  display: grid;
+  grid-template-columns: 15.125em calc(100% - 15.625em);
+  gap: .5em;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    left: .75em;
+    transform: translateX(-50%);
+    width: 1px;
+    height: calc(100% - 1.5em);
+    background-color: $gray-light2;
+  }
+  &__round{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5em;
+    height: 1.5em;
+    @include bgImgSize(100%);
+    &:before{
+      content: '';
+      @include centerAbsolute;
+      background-color: #2E2E48;
+      border-radius: 50%;
+      width: .375em;
+      height: .375em;
+    }
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+  }
+  &__place{
+    display: flex;
+    align-items: center;
+    margin-left: .25em;
+    img{
+      margin-right: .25em;
+      width: .75em;
+    }
+  }
+  &__badge{
+    display: flex;
+    align-items: center;
+    padding: 0 .2em;
+    height: 1em;
+    border-radius: .25em;
+    background-color: #EFE2F9;
+    color: $primary;
+  }
+  &__bottom{
+    display: flex;
+    align-items: center;
+    margin-top: .5em;
+  }
+  &__icon{
+    width: 3em;
+    flex-shrink: 0;
+    margin-right: 1em;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  &__info{
+    @include grid100gap(.25em);
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .achievement-item{
+    grid-template-columns: 100%;
+    padding-left: 1.75em;
+  }
+}

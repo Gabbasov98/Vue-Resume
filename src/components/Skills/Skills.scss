@@ -1,0 +1,39 @@
+.skills{
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3,calc(100% / 3 - 1em / 3));
+    gap: .5em;
+    margin-top: 2em;
+  }
+}
+
+.skill-item{
+  border-radius: .5em;
+  background: #F7F9FC;
+  padding: 1em 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__icon{
+    height: 4em;
+    flex-shrink: 0;
+    margin-bottom: .5em;
+    @include center;
+    img{
+      height: 100%;
+      mix-blend-mode: multiply;
+    }
+  }
+  &__date{
+    margin-top: .2em;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .skills{
+    &__items{
+      grid-template-columns: 100%;
+    }
+  }
+}

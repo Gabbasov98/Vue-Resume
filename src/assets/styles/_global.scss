@@ -1,0 +1,124 @@
+@import 'vars';
+html {
+    width: 100%;
+    &.fixed-body {
+        overflow-y: hidden;
+    }
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 22.18em calc(100% - 22.18em);
+}
+
+.sidebar {
+    background-color: #F7F9FC;
+    padding: 3em;
+}
+
+.main{
+    padding: 4em 3em 0 6em;
+}
+
+.m-page {
+    width: calc(100vw - (100vw - 100%));
+    overflow-x: hidden;
+    font-family: $font1;
+    font-weight: 400;
+    color: $black;
+    font-size: calc(100vw * (16 / 1200));
+    &.fixed-body,
+    &.fixed-body2{
+        overflow-y: hidden;
+        padding-right: var(--scrollWidth);
+    }
+}
+
+a {
+    &:hover {
+        color: $primary;
+    }
+}
+
+.relative-block{
+    position: relative;
+}
+
+.m-section{
+    padding-bottom: 3em;
+    position: relative;
+}
+
+._line{
+    position: absolute;
+    right: 100%;
+    margin-right: 2em;
+    height: 100%;
+    width: 2em;
+    &:after,
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &:before{
+        width: 2em;
+        height: 2em;
+        border: .625em solid $white;
+        background-color: #5531A7;
+        border-radius: 50%;
+        box-shadow: 0px 2.017px 8.067px 0px rgba(0, 0, 0, 0.05), 0px 12.101px 48.404px 0px rgba(0, 0, 0, 0.04), 0px 2.017px 2.017px 0px rgba(0, 0, 0, 0.04) inset;
+        z-index: 2;
+    }
+    &:after{
+        width: 1px;
+        height: 100%;
+        background-color: $gray-light;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .m-page{
+        font-size: calc(100vw * (16 / 768));
+    }
+
+    .container{
+        padding: 0 1.125em;
+    }
+
+    .wrapper{
+        grid-template-columns: 100%;
+    }
+
+    .sidebar{
+        padding: 2em 1em;
+    }
+
+    .main{
+        padding: 2em 1em;
+        order: -1;
+    }
+
+    .m-section{
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+
+    ._line{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .m-page{
+        font-size: calc(100vw * (16 / 360));
+    }
+}
+
+
