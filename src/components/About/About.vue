@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import './about.scss';
+    import './About.scss';
     export default {
         name: "About"
     }
