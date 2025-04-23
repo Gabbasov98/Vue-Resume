@@ -21,8 +21,6 @@
 </template>
 
 <script>
-  import { ref, onMounted, onBeforeUnmount } from 'vue'
-
   import About from "#/components/About/About.vue";
   import Contacts from "#/components/Contacts/Contacts.vue";
   import Socials from "#/components/Socials/Socials.vue";
