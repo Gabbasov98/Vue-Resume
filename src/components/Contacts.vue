@@ -32,7 +32,6 @@
 </template>
 
 <script>
-    import './Contacts.scss';
     export default {
         name: "Contacts",
         data() {
@@ -65,6 +64,46 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+    .contacts{
+        margin-top: 2em;
+        padding: 2em 0;
+        border-top: 1px solid $gray-light;
+        &__items{
+            @include grid100gap(1.5em);
+        }
+    }
+
+    .contact-item{
+        display: flex;
+        align-items: center;
+        &__icon{
+            @include center;
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            background-color: $gray-light;
+            margin-right: 1em;
+            flex-shrink: 0;
+            img{
+                width: 1.3125em;
+            }
+        }
+        &__content{
+            @include grid100gap(.25em);
+        }
+        &__desc{
+            word-break: break-word;
+        }
+    }
+
+
+    @media screen and (max-width: 992px){
+        .contacts{
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+    }
 
 </style>

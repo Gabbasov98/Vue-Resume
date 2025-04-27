@@ -25,7 +25,6 @@
 </template>
 
 <script>
-    import './Languages.scss';
     export default {
         name: "Languages",
         data() {
@@ -52,6 +51,37 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+    .languages{
+        padding: 2em 0;
+        border-top: 1px solid $gray-light;
+        &__items{
+            margin-top: 1.25em;
+            @include grid100gap(1.25em);
+        }
+    }
+
+    .language-item{
+        display: flex;
+        align-items: center;
+        &__icon{
+            @include center;
+            width: 2em;
+            height: 2em;
+            margin-right: 1em;
+            flex-shrink: 0;
+            img{
+                filter: drop-shadow(0px 4.034px 16.135px rgba(0, 0, 0, 0.06));
+                width: 100%;
+                border-radius: .25em;
+            }
+        }
+        &__content{
+            @include grid100gap(.25em);
+        }
+        &__desc{
+            word-break: break-word;
+        }
+    }
 
 </style>

@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <a target="_blank" :href="item.link" class="project-item__link">
-                    <img src="../../assets/img/chain2.svg" alt="">
+                    <img src="../assets/img/chain2.svg" alt="">
                     <span class="text16">{{item.link}}</span>
                 </a>
             </div>
@@ -33,7 +33,6 @@
 </template>
 
 <script>
-    import './Projects.scss';
     export default {
         name: "Projects",
         data() {
@@ -69,6 +68,69 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+    .projects{
+        &__items{
+            margin-top: 2em;
+            display: grid;
+            grid-template-columns: repeat(2,calc(50% - .375em));
+            gap: .75em;
+        }
+    }
+
+    .project-item{
+        padding: 1.5em;
+        background-color: $gray-light2;
+        border-radius: .5em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &__top{
+            display: flex;
+            align-items: flex-start;
+        }
+        &__icon{
+            width: 3em;
+            flex-shrink: 0;
+            margin-right: 1em;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        &__info{
+            @include grid100gap(.25em);
+        }
+        &__desc{
+            letter-spacing: -.01em;
+        }
+        &__link{
+            display: flex;
+            align-items: center;
+            font-family: $font2;
+            font-weight: 600;
+            color: #516CF7;
+            &:hover{
+                opacity: .8;
+            }
+            span{
+                text-decoration: underline;
+            }
+            img{
+                width: 1.5em;
+                margin-right: .75em;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 576px){
+        .projects{
+            &__items{
+                grid-template-columns: 100%;
+            }
+        }
+    }
 
 </style>

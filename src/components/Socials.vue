@@ -31,7 +31,6 @@
 </template>
 
 <script>
-    import './Socials.scss';
     export default {
         name: "Socials",
         data() {
@@ -61,6 +60,37 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+    .socials{
+        padding: 2em 0;
+        border-top: 1px solid $gray-light;
+        &__items{
+            margin-top: 1.25em;
+            @include grid100gap(1.25em);
+        }
+    }
+
+    .social-item{
+        display: flex;
+        align-items: center;
+        &__icon{
+            @include center;
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            margin-right: 1em;
+            flex-shrink: 0;
+            box-shadow: 0px 4.034px 16.135px 0px rgba(0, 0, 0, 0.06);
+            img{
+                width: 100%;
+            }
+        }
+        &__content{
+            @include grid100gap(.25em);
+        }
+        &__desc{
+            word-break: break-word;
+        }
+    }
 
 </style>

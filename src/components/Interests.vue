@@ -22,7 +22,6 @@
 </template>
 
 <script>
-    import './Interests.scss';
     export default {
         name: "Interests",
         data() {
@@ -42,6 +41,32 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+    .interests{
+        padding: 2em 0 0;
+        border-top: 1px solid $gray-light;
+        &__items{
+            margin-top: 1em;
+            @include grid100gap(1em);
+        }
+    }
+
+    .interest-item{
+        display: flex;
+        align-items: center;
+        &__icon{
+            @include center;
+            width: 2.1875em;
+            height: 2.1875em;
+            margin-right: 1em;
+            flex-shrink: 0;
+            img{
+                width: 100%;
+            }
+        }
+        &__content{
+            @include grid100gap(.25em);
+        }
+    }
 
 </style>

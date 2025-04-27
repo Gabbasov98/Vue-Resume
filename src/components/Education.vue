@@ -30,7 +30,6 @@
 </template>
 
 <script>
-    import './Education.scss';
     export default {
         name: "Education",
         data() {
@@ -54,6 +53,52 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+    .education{
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(2,calc(50% - .375em));
+            gap: .75em;
+            margin-top: 2em;
+        }
+    }
+
+    .education-item{
+        border-radius: .5em;
+        background: #F7F9FC;
+        padding: 1em 1.5em;
+        &__top{
+            display: flex;
+            align-items: center;
+            margin-bottom: .5em;
+        }
+        &__icon{
+            width: 3em;
+            flex-shrink: 0;
+            margin-right: 1em;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        &__date{
+            margin-top: .2em;
+        }
+    }
+
+
+    @media screen and (max-width: 992px){
+        .education{
+            margin-top: 3em;
+        }
+    }
+
+    @media screen and (max-width: 576px){
+        .education{
+            &__items{
+                grid-template-columns: 100%;
+            }
+        }
+    }
 
 </style>

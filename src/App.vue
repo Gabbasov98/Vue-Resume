@@ -21,15 +21,15 @@
 </template>
 
 <script>
-  import About from "#/components/About/About.vue";
-  import Contacts from "#/components/Contacts/Contacts.vue";
-  import Socials from "#/components/Socials/Socials.vue";
-  import Languages from "#/components/Languages/Languages.vue";
-  import Interests from "#/components/Interests/Interests.vue";
-  import Education from "#/components/Education/Education.vue";
-  import Skills from "#/components/Skills/Skills.vue";
-  import Achievements from "#/components/Achievements/Achievements.vue";
-  import Projects from "#/components/Projects/Projects.vue";
+  import About from "#/components/About.vue";
+  import Contacts from "#/components/Contacts.vue";
+  import Socials from "#/components/Socials.vue";
+  import Languages from "#/components/Languages.vue";
+  import Interests from "#/components/Interests.vue";
+  import Education from "#/components/Education.vue";
+  import Skills from "#/components/Skills.vue";
+  import Achievements from "#/components/Achievements.vue";
+  import Projects from "#/components/Projects.vue";
   export default {
     components: {
       About,
