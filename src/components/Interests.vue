@@ -41,7 +41,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .interests{
         padding: 2em 0 0;
         border-top: 1px solid $gray-light;

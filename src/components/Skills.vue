@@ -66,7 +66,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .skills{
         &__items{
             display: grid;

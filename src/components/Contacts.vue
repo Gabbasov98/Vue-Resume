@@ -64,7 +64,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .contacts{
         margin-top: 2em;
         padding: 2em 0;

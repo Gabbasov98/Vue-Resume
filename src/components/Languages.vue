@@ -51,7 +51,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .languages{
         padding: 2em 0;
         border-top: 1px solid $gray-light;

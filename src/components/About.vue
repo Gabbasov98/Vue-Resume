@@ -18,7 +18,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .about{
         &__img{
             width: 6em;

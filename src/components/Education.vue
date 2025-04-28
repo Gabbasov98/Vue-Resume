@@ -53,7 +53,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .education{
         &__items{
             display: grid;

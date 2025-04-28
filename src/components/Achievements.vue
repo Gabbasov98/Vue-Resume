@@ -76,7 +76,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .achievements{
         &__items{
             margin-top: 2em;

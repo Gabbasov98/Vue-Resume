@@ -60,7 +60,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .socials{
         padding: 2em 0;
         border-top: 1px solid $gray-light;

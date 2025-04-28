@@ -68,7 +68,7 @@
     }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .projects{
         &__items{
             margin-top: 2em;
